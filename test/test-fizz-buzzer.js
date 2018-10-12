@@ -39,4 +39,17 @@ describe('fizzBuzzer', function () {
       expect(fizzBuzzer(input)).to.not.equal('buzz');
     });
   });
+
+  it('should return "fizz" for multiples of 3', function () {
+    const goodInputs = [6, 9, 18, 24];
+    goodInputs.forEach(function (input) {
+      const result = fizzBuzzer(input);
+      expect(result).to.equal('fizz');
+    });
+
+    const badInputs = [5, 10, 15, 19];
+    badInputs.forEach(function (input) {
+      expect(fizzBuzzer(input)).to.not.equal('fizz');
+    });
+  });
 });
