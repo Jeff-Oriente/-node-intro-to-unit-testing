@@ -52,4 +52,12 @@ describe('fizzBuzzer', function () {
       expect(fizzBuzzer(input)).to.not.equal('fizz');
     });
   });
+
+  it('should return num for any num not a multiple of 3, 5 or 15', function () {
+    const goodInputs = [1, 7, 4, 11];
+    goodInputs.forEach(function (input) {
+      const result = fizzBuzzer(input);
+      expect(result).to.equal(input);
+    });
+  });
 });
