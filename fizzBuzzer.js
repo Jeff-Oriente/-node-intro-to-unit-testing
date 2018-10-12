@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = function(num) {
 	if (typeof num !== 'number') {
 		throw Error('`num` must be a number');
