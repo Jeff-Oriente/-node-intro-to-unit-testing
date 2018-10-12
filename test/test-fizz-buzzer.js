@@ -17,12 +17,26 @@ describe('fizzBuzzer', function () {
   it('should return "fizz-buzz" for only multiples of 15', function () {
     const goodInputs = [15, 30, 45, 120];
     goodInputs.forEach(function (input) {
-      expect(fizzBuzzer(input)).to.equal('fizz-buzz');
+      const result = fizzBuzzer(input);
+      expect(result).to.equal('fizz-buzz');
     });
 
     const badInputs = [3, 9, 20];
     badInputs.forEach(function (input) {
       expect(fizzBuzzer(input)).to.not.equal('fizz-buzz');
+    });
+  });
+  
+  it('should return "buzz" for multiples of 5', function () {
+    const goodInputs = [10, 20, 25, 40];
+    goodInputs.forEach(function (input) {
+      const result = fizzBuzzer(input);
+      expect(result).to.equal('buzz');
+    });
+
+    const badInputs = [6, 13, 23, 51];
+    badInputs.forEach(function (input) {
+      expect(fizzBuzzer(input)).to.not.equal('buzz');
     });
   });
 });
